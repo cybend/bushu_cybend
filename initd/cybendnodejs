@@ -1,0 +1,66 @@
+#!/bin/bash
+#chkconfig:346 61 61
+#description:pomelo init.d 开机启动脚本
+
+#. /etc/init.d/functions
+
+node=/usr/local/bin/node
+root=/soserver/game-server
+app=/soserver/game-server/app.js
+app_jobs=/soserver/game-server/jobs.js
+
+export NODE_PATH=/usr/local/lib/node_modules
+
+start(){
+    echo -n $"Starting......"
+     cd $root
+     $node $app >> $root/app.log >/dev/null 2>&1&
+#     $node $app_jobs >> $root/app_jobs.log >/dev/null 2>&1&
+#    success
+    echo
+
+    return $retval
+}
+
+stop(){
+    echo -n $"Stopping......"
+    #kill `lsof -t -i:1040`
+    cd $root
+#    ps -ef |grep node |grep jobs.js |awk '{print $2}' |xargs kill -9
+    pomelo stop
+#    success
+    echo
+
+    return $retval
+}
+
+restart() {
+    stop
+    start
+}
+
+case "$1" in
+    start|stop|restart)
+        $1
+        ;;
+    force-reload)
+        restart
+        ;;
+    status)
+        status $prog
+        ;;
+    try-restart|condrestart)
+        if status $prog >/dev/null ; then
+            restart
+        fi
+        ;;
+    reload)
+        action $"Service ${0##*/} does not support the reload action: " /bin/false
+        exit 3
+        ;;
+    *)
+        echo $"Usage: $0 {start|stop|status|restart|try-restart|force-reload}"
+        exit 2
+esac
+
+
