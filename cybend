@@ -1,0 +1,48 @@
+
+echo  "\033[44;37m ================================================ \033[0m"
+echo  "\033[44;37m 欢迎使用【采贝技术服务器自动化部署平台】v1.0 \033[0m"
+echo  "\033[44;37m ================================================ \033[0m"
+echo  "\033[44;37m               【By 采贝技术运维团队】 \033[0m"
+
+
+cat <<EOF
+	                           【部署向导：】
+        ======================================================================= 
+	1.redis(v2.8.13)环境部署地址：
+	curl http://cybend.com/bushu/redis/redis.sh | sh 
+
+	2.Pomelo(v1.1.0) Nodejs(v0.10.31)环境部署地址: 
+	curl http://cybend.com/bushu/pomelo/pomelo.sh | sh 
+
+	3.mysql percona-server-5.6环境部署地址: 
+	curl http://cybend.com/bushu/mysql/mysqlpercona.sh | sh 
+
+	4.启动脚本 
+	wget http://cybend.com/bushu/initd/tqknodejs 
+
+	5.打包脚本 
+	curl http://cybend.com/bushu/publish/publish_dabao.sh | sh 
+
+	6.部署脚本 
+	curl http://cybend.com/bushu/publish/publish_config.sh | sh
+ 
+	7.PHP 5.5 nginx-1.6.1环境脚本(Ubuntu12.04) 
+	curl http://cybend.com/bushu/php/php12.04.sh | sh 
+
+	8.PHP 5.5 nginx-1.6.1环境脚本(Ubuntu14.04) 
+	curl http://cybend.com/bushu/php/php14.04.sh | sh
+ 
+	9.sourceslist(东北大学源|阿里云提供)更新脚本(Ubuntu12.04) 
+	curl http://cybend.com/bushu/apt/12.04/apt12.04.sh | sh 
+
+	10.sourceslist(东北大学源|阿里云提供)更新脚本(Ubuntu14.04) 
+	curl http://cybend.com/bushu/apt/14.04/apt14.04.sh | sh 
+	
+	11.puppet server 自动化部署服务端
+        curl http://cybend.com/bushu/puppet/puppet-server.sh | sh
+
+	12.puppet client 自动化部署客户端
+        curl http://cybend.com/bushu/puppet/puppet-client.sh | sh
+
+        =======================================================================
+EOF
