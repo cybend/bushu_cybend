@@ -1,13 +1,13 @@
-#!/bin/bash
+﻿#!/bin/bash
 #chkconfig:346 61 61
 #description:pomelo init.d 开机启动脚本
 
 #. /etc/init.d/functions
 
 node=/usr/local/bin/node
-root=/soserver/game-server
-app=/soserver/game-server/app.js
-app_jobs=/soserver/game-server/jobs.js
+root=/server/g-server
+app=/server/g-server/app.js
+app_jobs=/server/g-server/jobs.js
 
 export NODE_PATH=/usr/local/lib/node_modules
 
