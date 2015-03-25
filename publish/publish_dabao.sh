@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 echo  "\033[44;37m ================================ \033[0m"
 echo  "\033[44;37m 采贝技术服务器自动化部署平台 \033[0m"
 echo  "\033[44;37m ================================ \033[0m"
@@ -22,13 +22,13 @@ else
 
 fi
 
-tar zcvf /Release/soserver.ver$Now.tar.gz  /soserver
+tar zcvf /Release/server.ver$Now.tar.gz  /soserver
 echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
 echo "\033[41;37m 打包成功! \033[0m"
 sleep 10
 
 
-scp /Release/soserver.ver$Now.tar.gz  root@192.168.91.129:/Release/
+scp /Release/server.ver$Now.tar.gz  root@ip:/Release/
 echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
 echo "\033[41;37m 部署包成功传送到目标服务器! \033[0m"
 sleep 10
