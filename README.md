@@ -49,4 +49,4 @@
 +例如部署：redis环境，在linux环境命令界面输入curl http://站点的ip或域名/redis/redis.sh | sh
 +
 +
-+【如果自己不想增加服务器部署，可以在自己的linux服务器上直接用采贝提供的开发部署平台：curl  http://bushu.cybend.com/cybend】
++【 如果自己不想增加服务器部署，可以在自己的linux服务器上直接用采贝提供的开发部署平台：curl http://bushu.cybend.com/cybend  】
