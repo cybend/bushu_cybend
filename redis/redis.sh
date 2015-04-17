@@ -1,4 +1,4 @@
-# Version:cybendywauto-redis-1.0
+﻿# Version:cybendywauto-redis-1.0
 # By cybend
 # Title:自动化部署Redis环境
 
@@ -13,7 +13,7 @@ echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
 echo "\033[41;37m apt-get install tcl build-essential  finish! \033[0m"
 
 
-wget -P /etc  http://cybend.com/bushu/redis/redis.conf
+wget -P /etc  http://bushu.cybend.com/redis/redis.conf
 echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
 echo "\033[41;37m download redis config文件! \033[0m"
 

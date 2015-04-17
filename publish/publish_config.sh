@@ -50,7 +50,7 @@ if [ -f "$Init_File" ] ; then
 
 else
 
-	wget -P /etc/init.d/  http://cybend.com/bushu/initd/cybendnodejs
+	wget -P /etc/init.d/  http://bushu.cybend.com/initd/cybendnodejs
 	chmod 777 /etc/init.d/tqknodejs
 	echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
 	echo "\033[41;37m 自动启动脚本制作成功! \033[0m"

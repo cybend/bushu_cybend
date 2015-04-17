@@ -1,4 +1,4 @@
-# Version:cybendywauto-php-1.0
+﻿# Version:cybendywauto-php-1.0
 # By cybend
 # Title:自动化部署php环境
 # ver:1.0
@@ -11,7 +11,7 @@ echo  "\033[44;37m     【By 采贝技术运维团队】 \033[0m"
 
 cp /etc/apt/sources.list   /etc/apt/sources.list.bak
 rm -rf /etc/apt/sources.list
-wget -P  /etc/apt/   http://cybend.com/bushu/php/14.04/sources.list
+wget -P  /etc/apt/   http://bushu.cybend.com/php/14.04/sources.list
 echo  "\033[44;37m     sources.list 更新完毕 \033[0m"
 sleep 10
 
@@ -95,7 +95,7 @@ make
 make install
 
 rm -rf /usr/local/nginx/conf/nginx.conf
-wget -P /usr/local/nginx/conf/  http://cybend.com/bushu/php/nginx.conf
+wget -P /usr/local/nginx/conf/  http://bushu.cybend.com/php/nginx.conf
 
 echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
 echo "\033[41;37m  nginx安装完成！ \033[0m"
