@@ -33,16 +33,16 @@ echo "\033[41;37m  准备包安装完成！ \033[0m"
 sleep 10
 
 
-if [ -s pcre-8.35.tar.gz ]; then  
-		echo "\033[41;37m pcre-8.35.tar.gz文件已存在！ \033[0m"  
+if [ -s pcre-8.37.tar.gz ]; then  
+		echo "\033[41;37m pcre-8.37.tar.gz文件已存在！ \033[0m"  
       else  
-  		echo "pcre-8.35.tar.gz!!!下载中......"  
-  		sudo wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.35.tar.gz
+  		echo "pcre-8.37.tar.gz!!!下载中......"  
+  		sudo wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.37.tar.gz
 fi 
 
 
-echo ed58bcbe54d3b1d59e9f5415ef45ce1c > pcre.1
-md5sum pcre-8.35.tar.gz|cut -d ' ' -f1 >pcre.2
+echo 6e0cc6d1bdac7a4308151f9b3571b86e > pcre.1
+md5sum pcre-8.37.tar.gz|cut -d ' ' -f1 >pcre.2
 
 if [ -z "`diff pcre.1 pcre.2`" ] ;then
 	        echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
@@ -55,8 +55,8 @@ if [ -z "`diff pcre.1 pcre.2`" ] ;then
 	        exit 1
 	fi
 
-tar zxvf  pcre-8.35.tar.gz
-cd  pcre-8.35
+tar zxvf  pcre-8.37.tar.gz
+cd  pcre-8.37
 ./configure  
 make  
 make install
