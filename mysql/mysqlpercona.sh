@@ -15,8 +15,11 @@ echo "\033[41;37m apt-key 设置完毕 \033[0m"
 sleep 10
 
 
-echo deb http://repo.percona.com/apt precise main >> /etc/apt/sources.list
-echo deb-src http://repo.percona.com/apt precise main  >> /etc/apt/sources.list
+#echo deb http://repo.percona.com/apt precise main >> /etc/apt/sources.list
+#echo deb-src http://repo.percona.com/apt precise main  >> /etc/apt/sources.list
+
+echo deb http://repo.percona.com/apt trusty main >> /etc/apt/sources.list
+echo deb-src http://repo.percona.com/apt trusty main  >> /etc/apt/sources.list
 echo  "\033[44;37m 采贝技术运维团队提示： \033[0m"
 echo "\033[41;37m sources.list 添加完毕 \033[0m"
 sleep 10
